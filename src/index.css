@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+html,body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.bg-center{
+  background-image: url("/images/bgone.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.profile-pic{
+  margin: auto;
+  border: 6px solid white;
+  }
+  
+  .background{
+    background: rgba(7, 7, 7, 0.7);
+  }
+
+  .background-two{
+    background-image: url("/images/bgtwo.jpg");
+  min-height:100vh;
+  background-position: center;
+  background-size: cover;
+  }
+
+  .icons{
+    margin: auto;
+  }
