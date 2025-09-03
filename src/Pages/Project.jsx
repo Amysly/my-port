@@ -14,15 +14,6 @@ const myProjects = [
 
     {
         id: 2,
-        title: "To-do-list App",
-        description: "Created with Html,Css and Javascript",
-        image: "/images/todolist.jpg", 
-        liveLink: "https://preeminent-longma-18f0f3.netlify.app",
-        codeLink: "https://github.com/Amysly/Todolist"
-    },
-
-    {
-        id: 3,
         image: "/images/cart.jpg", 
         title: "E-commerce website",
         description: "Created with Html,Css and Javascript",
@@ -30,7 +21,7 @@ const myProjects = [
         codeLink: "https://github.com/Amysly/Amy-Kitchen"
     },
     {
-        id: 4,
+        id: 3,
         image: "/images/movie.jpg", 
         title: "Movie Search App",
         description: "Created with Html,Tailwind and React.js",
