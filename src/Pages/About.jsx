@@ -2,9 +2,9 @@ import React from 'react';
 
 const About = () => {
     return (
-      <div className="background-two">
+      <div className="">
 
-        <div className="pt-4 px-4 background">
+        <div className="pt-4 px-4">
           <h2 className="col-span-full text-yellow-400 text-lg sm:text-3xl 
           lg:text-4xl text-center font-serif lg:mt-20">ABOUT ME</h2>
           <div className="border border-yellow-400 w-32 mx-auto mt-4 mb-5"></div>

@@ -1,40 +1,44 @@
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
-import { FaLinkedin} from "react-icons/fa";
-import { FaTwitterSquare} from "react-icons/fa";
+import { FaFacebook, FaInstagramSquare, 
+  FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+
 const Home = () => {
-    return ( 
-        <div className="h-full w-full bg-cover bg-center">
-        <div className="pt-4 px-4 background">
-        <div className="text-white p-4">
-          <div className=" font-mono text-center mt-32">
-          <div className="profile-div mb-8">
-            <img  src="/images/amara.jpg" className="profile-pic mt-3 lg:mt-4 sm:mt-0
-             w-52 h-52 lg:w-80 lg:h-80 sm:w-52 sm:h-52
-             object-cover rounded-full"/>
-            </div>
-            <div className="font-serif">
-              <h1 className="text-2xl lg:text-5xl sm:text-xl  mb-8 text-yellow-400 font-serif ">Amarachi Obiegue</h1>
-              <p className="sm:text-2xl lg:text-3xl">I'm a passionate frontend developer</p>
-              <p className="sm:text-2xl lg:text-3xl"> I provide clean code and pixel perfect  design.</p>
-              <p className="sm:text-2xl lg:text-3xl">I also make website more & more interactive with web animations.</p>
-            </div>
-            <div className="flex justify-center space-x-4 mt-10 mb-10 text-4xl sm:text-3xl lg:text-5xl">
-          <FaTwitterSquare className="bg-zinc-700 p-2 rounded-full hover:bg-yellow-400"/>
-          <FaFacebook className="bg-zinc-700 p-2 rounded-full hover:bg-yellow-400"/>
-          <FaInstagramSquare className="bg-zinc-700 p-2 rounded-full hover:bg-yellow-400"/>
-          <FaLinkedin className="bg-zinc-700 p-2 rounded-full hover:bg-yellow-400"/>
-      </div>
+  const iconStyle =
+    "bg-zinc-700 p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300";
+
+  return (
+    <div className="min-h-screen flex items-center justify-center pt-4 px-12; ">
+      <div className="text-white p-4 grid lg:grid-cols-2 gap-6 items-center">
+        
+        {/* Intro Section */}
+        <section className="text-center mt-2">
+          <div className="font-sans">
+            <h1 className="text-xl sm:text-xl lg:text-5xl mb-6 text-yellow-400 font-serif">
+              Hi, I'm
+            </h1>
+             <h1 className="text-xl sm:text-xl lg:text-5xl mb-6 text-yellow-400 font-serif">
+              Amarachi Obiegue
+            </h1>
+          <p className="text-sm sm:text-base lg:text-xl text-yellow-400 font-serif">
+            I'm a frontend developer specializing in building user-friendly web applications. 
+            I'm seeking a challenging role where I can apply my skills, grow my potential, 
+            and contribute to both team collaboration and company success.
+          </p>
 
           </div>
-          
+        </section>
+
+        {/* Profile Image */}
+        <div className="flex justify-center">
+          <img
+            src="/images/amara.jpg"
+            alt="Profile of Amarachi Obiegue"
+            className="profile-pic w-52 h-52 sm:w-60 sm:h-60 lg:w-80 lg:h-80 lg:mt-8
+            object-cover rounded-full shadow-lg"
+          />
         </div>
-     <div>
-    
-     </div>
-     </div>
+      </div>
     </div>
-     );
-  }
-  
-  export default Home;
+  );
+};
+
+export default Home;

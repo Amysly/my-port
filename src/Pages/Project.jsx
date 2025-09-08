@@ -31,7 +31,7 @@ const myProjects = [
 ]
 const Project = () => {
   return (
-    <div className="background-two">
+    <div className="bg-black">
     <div className="pt-4 px-4 background">
     <h2 className='col-span-full text-yellow-400 text-lg lg:text-4xl sm:text-xl sm:mt-10
           lg:mt-20 text-center font-serif'> Projects</h2>
