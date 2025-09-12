@@ -1,7 +1,30 @@
-import { FaFacebook, FaInstagramSquare, 
-  FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import {motion } from "framer-motion";
+
+
+const paragraphWrite={
+  hidden:{
+    opacity:0,
+  },
+  visible:{
+   opacity:1 ,
+   transition:{delay: 3, duration: 1,
+    type:'spring', stiffness:200
+   }
+  }
+}
+
 
 const Home = () => {
+  const [doneTyping, setDoneTyping] = useState(false);
+
+useEffect(() => {
+    // match typing duration in CSS (2s here)
+    const timer = setTimeout(() => setDoneTyping(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+
   const iconStyle =
     "bg-zinc-700 p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300";
 
@@ -12,17 +35,25 @@ const Home = () => {
         {/* Intro Section */}
         <section className="text-center mt-2">
           <div className="font-sans">
-            <h1 className="text-xl sm:text-xl lg:text-5xl mb-6 text-yellow-400 font-serif">
+            <h1 className="text-2xl  lg:text-5xl mb-6 text-yellow-400 font-serif"
+            >
+              
               Hi, I'm
             </h1>
-             <h1 className="text-xl sm:text-xl lg:text-5xl mb-6 text-yellow-400 font-serif">
-              Amarachi Obiegue
-            </h1>
-          <p className="text-sm sm:text-base lg:text-xl text-yellow-400 font-serif">
+             <h1
+            className='text-2xl  lg:text-5xl mb-6 text-yellow-400 font-serif typewriter'
+        >
+          Amarachi Obiegue
+        </h1>
+          <motion.p className="text-lg lg:text-xl text-yellow-400 font-serif"
+          variants={paragraphWrite}
+          initial='hidden'
+          animate='visible'
+          >
             I'm a frontend developer specializing in building user-friendly web applications. 
             I'm seeking a challenging role where I can apply my skills, grow my potential, 
             and contribute to both team collaboration and company success.
-          </p>
+          </motion.p>
 
           </div>
         </section>

@@ -1,8 +1,8 @@
 const Footer = () => {
     return ( 
-        <div className="">
-            <h6 className="text-yellow-400 text-1xl p-8 text-center font-serif">©
-                 2025.amarachukuwuobiegue@gmail.com. All right reserved.</h6>
+        <div className="bg-zinc-950">
+            <h6 className="text-yellow-400 text-1xl p-4 text-center font-serif">©
+                 2025.amarachukuwuobiegue@gmail.com.</h6>
         </div>
      );
 }
