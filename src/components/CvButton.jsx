@@ -7,7 +7,7 @@ const CvButton = () => {
         href="/cv/Amarachi-ObiegueCV.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-yellow-400 px-4 py-2 flex items-center justify-center 
+        className="bg-yellow-400 px-4 py-2 flex items-center justify-center whitespace-nowrap
                 rounded-lg text-white font-serif w-32 hover:bg-yellow-500"
     >
         View Resume
