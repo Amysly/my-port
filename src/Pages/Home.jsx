@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import CvButton from "../components/CvButton";
 import {motion } from "framer-motion";
 
 
@@ -54,8 +55,8 @@ useEffect(() => {
             I'm seeking a challenging role where I can apply my skills, grow my potential, 
             and contribute to both team collaboration and company success.
           </motion.p>
-
           </div>
+         
         </section>
 
         {/* Profile Image */}
@@ -67,6 +68,7 @@ useEffect(() => {
             object-cover rounded-full shadow-lg"
           />
         </div>
+         <CvButton/>
       </div>
     </div>
   );
