@@ -21,7 +21,7 @@ const About = () => {
           <img
             src="/images/amara.jpg"
             alt="Profile of Amarachi Obiegue"
-            className="shadow-lg sm:w-60 sm:h-60 lg:w-96 lg:h-96 object-contain
+            className="shadow-lg w-40 h-40 sm:w-60 sm:h-60 lg:w-96 lg:h-96 object-contain
             mt-4 sm:mt-4"
           />
         </div>
@@ -45,7 +45,7 @@ const About = () => {
       
       </div>
        <div className="flex justify-center mb-4">
-        <motion.h2 className="border border-white text-xl text-white whitespace-nowrap
+        <motion.h2 className="border border-white text-sm lg:text-xl text-white whitespace-nowrap
         font-serif w-32 flex items-center justify-center p-2 hover:bg-black" data-aos='fade-left'
         >
           <Link to={'/project'}>

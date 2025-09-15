@@ -114,8 +114,8 @@ const Skills = () => {
                  </motion.span>
             ))}
             </motion.p>
-            <h2 className="border border-black text-lg lg:text-xl text-black 
-                   font-serif w-32  flex items-center justify-center p-2 mb-4 mx-auto" 
+            <h2 className="border border-black text-sm lg:text-xl text-black 
+                   font-serif w-32  flex items-center justify-center p-2 mb-6 mx-auto" 
                    data-aos='fade-right'>
                      <Link to={'/contact'}>
                       Contact Me
