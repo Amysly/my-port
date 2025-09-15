@@ -30,23 +30,23 @@ useEffect(() => {
     "bg-zinc-700 p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300";
 
   return (
-    <div className="min-h-screen flex items-center justify-center pt-4 px-12; ">
-      <div className="text-white p-4 grid lg:grid-cols-2 gap-6 items-center">
+    <div className=" bg-white min-h-screen flex items-center justify-center pt-4 px-12 ">
+      <div className="text-white p-4 items-center">
         
         {/* Intro Section */}
-        <section className="text-center mt-2">
+        <section className="text-center mt-2 text-black mb-3">
           <div className="font-sans">
-            <h1 className="text-2xl  lg:text-5xl mb-6 text-yellow-400 font-serif"
+            <h1 className="text-2xl  lg:text-5xl mb-6 t font-serif"
             >
               
               Hi, I'm
             </h1>
              <h1
-            className='text-2xl  lg:text-5xl mb-6 text-yellow-400 font-serif typewriter'
+            className='text-2xl  lg:text-5xl mb-6  font-serif typewriter'
         >
           Amarachi Obiegue
         </h1>
-          <motion.p className="text-lg lg:text-xl text-yellow-400 font-serif"
+          <motion.p className="text-lg lg:text-xl  font-serif"
           variants={paragraphWrite}
           initial='hidden'
           animate='visible'
@@ -58,16 +58,7 @@ useEffect(() => {
           </div>
          
         </section>
-
         {/* Profile Image */}
-        <div className="flex justify-center">
-          <img
-            src="/images/amara.jpg"
-            alt="Profile of Amarachi Obiegue"
-            className="profile-pic w-52 h-52 sm:w-60 sm:h-60 lg:w-80 lg:h-80 lg:mt-8
-            object-cover rounded-full shadow-lg"
-          />
-        </div>
          <CvButton/>
       </div>
     </div>

@@ -57,8 +57,7 @@ const letterVariants = {
         {/* Left Side - Writeup */}
         <div className="flex flex-col justify-center">
            <motion.h2
-                className="text-2xl lg:text-5xl font-serif
-           text-yellow-400 mt-2 sm:mt-16 mb-4"
+                className="text-2xl lg:text-5xl font-serif mt-2 sm:mt-16 mb-4"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -74,7 +73,7 @@ const letterVariants = {
                   </motion.span>
                 ))}
               </motion.h2>
-          <p className="text-lg lg:text-xl text-yellow-400 mb-6 leading-relaxed">
+          <p className="text-lg lg:text-xl mb-6 leading-relaxed">
             I’m open to remote and onsite opportunities whether full-time,
             part-time, or contract roles. If you’d like to discuss a project,
             collaboration, or job opportunity, please reach out!
@@ -82,12 +81,13 @@ const letterVariants = {
         </div>
 
         {/* Right Side - Contact Form */}
-        <div className="bg-zinc-950 p-6 md:p-10 rounded-lg shadow-lg mt-4 sm:mt-8 lg:mt-16">
+        <div className="bg-zinc-950 p-6 md:p-10 rounded-lg shadow-lg mt-4
+         sm:mt-8 lg:mt-16" data-aos="zoom-in-up">
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
+              placeholder="Mary Joe"
               className="p-3 w-full border border-zinc-700 rounded-md bg-transparent text-white"
               value={formData.name}
               onChange={handleChange}
@@ -95,21 +95,20 @@ const letterVariants = {
             <input
               type="email"
               name="email"
-              placeholder="Your Email"
+              placeholder="email@example.com"
               className="p-3 w-full border border-zinc-700 rounded-md bg-transparent text-white"
               value={formData.email}
               onChange={handleChange}
             />
             <textarea
               name="message"
-              placeholder="Your Message"
+              placeholder="How can i help?"
               rows="5"
               className="p-3 w-full border border-zinc-700 rounded-md bg-transparent text-white resize-none"
               value={formData.message}
               onChange={handleChange}
             ></textarea>
-            <button className="p-3 bg-yellow-400 rounded-md font-sans text-white
-             hover:bg-yellow-500 transition">
+            <button className="p-3 bg-white rounded-md font-sans">
               Send Message
             </button>
           </form>

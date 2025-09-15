@@ -5,6 +5,7 @@ import {
   SiGit, SiJavascript, SiBootstrap 
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const skills = [
   { id: 1, name: "React", icon: <SiReact className="text-cyan-400 text-3xl" /> },
@@ -18,6 +19,7 @@ const skills = [
   { id: 9, name: "Bootstrap", icon: <SiBootstrap className="text-purple-500 text-3xl" /> },
 ];
 const text = "Technologies I Specialize In";
+const contactText ='Interested in working with me?'
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -48,47 +50,79 @@ const letterVariants = {
 
 const Skills = () => {
   return (
+    <div>
     <div className="min-h-screen flex items-center justify-center">
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-10 max-w-6xl">
         
         {/* LEFT SIDE - INTRO */}
-        <div className="text-yellow-400 flex flex-col justify-center">
-      <motion.h2
-      className="text-2xl  lg:text-4xl font-serif
-           text-yellow-400  text-center lg:text-left mb-2 sm:mb-6 mt-12 sm:mt-4"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      {text.split("").map((char, index) => (
-        <motion.span
-          key={index}
-          variants={letterVariants}
-          whileHover="hover"
-          className="inline-block"
-        >
-          {char === " " ? "\u00A0" : char}
-        </motion.span>
-      ))}
-    </motion.h2>
+        <div className="flex flex-col justify-center">
+          <motion.h2
+            className="text-2xl lg:text-4xl font-serif
+             text-black text-center lg:text-left mb-6 mt-12 sm:mt-4"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {text.split("").map((char, index) => (
+              <motion.span
+                key={index}
+                variants={letterVariants}
+                whileHover="hover"
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.h2>
           <p className="text-lg lg:text-xl font-sans text-center lg:text-left">
-           Over the past few years, I’ve gained hands-on experience with modern
+            Over the past few years, I’ve gained hands-on experience with modern
             frontend tools and frameworks. I use these technologies to build
             responsive, user-friendly, and visually engaging applications.
           </p>
         </div>
 
         {/* RIGHT SIDE - SKILLS GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-6 sm:mb-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-6">
           {skills.map((skill) => (
-            <div key={skill.id} className="bg-white p-3 rounded-lg mb-2 flex 
-            flex-col items-center justify-center"> 
-            <div>{skill.icon}</div>
-             <h4 className="font-sans text-zinc-950">{skill.name}</h4> </div>
+            <div 
+              key={skill.id} 
+              aria-label={skill.name}
+              className="bg-zinc-900 p-3 rounded-lg flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+            > 
+              <div>{skill.icon}</div>
+              <h4 className="font-sans text-white mt-2">{skill.name}</h4> 
+            </div>
           ))}
         </div>
-
       </section>
+    </div>
+    <div>
+      <div className="">
+           <motion.p className="font-serif text-2xl 
+           lg:text-4xl text-center mb-4"
+           variants={containerVariants}
+            initial="hidden"
+            animate="visible">
+              {contactText.split("").map((char, index) => (
+              <motion.span
+                key={index}
+                variants={letterVariants}
+                whileHover="hover"
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+                 </motion.span>
+            ))}
+            </motion.p>
+            <h2 className="border border-black text-xl text-black 
+                   font-serif w-32  flex items-center justify-center p-2 mb-4 mx-auto" data-aos='fade-right'>
+                     <Link to={'/contact'}>
+                      Contact Me
+                     </Link>
+             </h2>
+      </div>
+    </div>
+    
     </div>
   );
 };

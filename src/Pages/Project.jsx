@@ -20,7 +20,7 @@ const Project = () => {
       {/* ================= Mobile / Tablet Layout ================= */}
       <div className="md:hidden">
         {/* Heading + description (small screen styling) */}
-        <div className="text-yellow-400 font-serif text-center mb-8">
+        <div className="text-black font-serif text-center mb-8">
           <h2 className="text-2xl sm:text-3xl mb-4">Things I’ve Built</h2>
           <p className="leading-6 text-base sm:text-lg">
             Here are some of the projects I’ve worked on. Each one highlights my
@@ -56,7 +56,7 @@ const Project = () => {
 
           {/* Card Content */}
           <div className="p-4 font-serif">
-            <h3 className="text-lg font-semibold text-yellow-300 text-center">
+            <h3 className="text-lg font-semibold text-white text-center">
               {project.title}
             </h3>
             <p className="text-sm text-white mt-2">{project.description}</p>
@@ -67,7 +67,7 @@ const Project = () => {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-400 text-black px-3 py-2 rounded-lg 
+                className="bg-purple-950 text-black px-3 py-2 rounded-lg 
                 text-sm font-serif hover:bg-yellow-500 transition"
               >
                 Live Demo
@@ -76,7 +76,7 @@ const Project = () => {
                 href={project.codeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-400 px-3 py-2 rounded-lg text-sm 
+                className="bg-purple-950 px-3 py-2 rounded-lg text-sm 
                 font-serif hover:bg-zinc-600 transition"
               >
                 Source Code
@@ -91,7 +91,7 @@ const Project = () => {
       {/* ================= Desktop Layout ================= */}
       <div className="hidden md:grid grid-cols-2 gap-10 w-full">
         {/* Left Section */}
-        <div className="text-yellow-400 font-serif flex flex-col justify-center">
+        <div className="font-serif flex flex-col justify-center" data-aos="fade-up">
           <h2 className="text-4xl mt-5 mb-6">Things I’ve Built</h2>
           <p className="leading-7 text-lg">
             Here are some of the projects I’ve worked on. Each one highlights my
@@ -125,7 +125,7 @@ const Project = () => {
               </a>
 
               <div className="p-5 font-serif">
-                <h3 className="text-xl font-semibold text-yellow-300 text-center">
+                <h3 className="text-xl font-semibold text-white text-center">
                   {project.title}
                 </h3>
                 <p className="text-sm text-white mt-2">
@@ -138,8 +138,8 @@ const Project = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-yellow-400 text-black px-3 py-2 rounded-lg 
-                    text-sm font-serif hover:bg-yellow-500 transition"
+                    className="bg-white px-3 py-2 rounded-lg 
+                    text-sm font-serif hover:bg-zinc-600  transition"
                   >
                     Live Demo
                   </a>
@@ -147,7 +147,7 @@ const Project = () => {
                     href={project.codeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-yellow-400 px-3 py-2 rounded-lg text-sm 
+                    className="bg-white px-3 py-2 rounded-lg text-sm 
                     font-serif hover:bg-zinc-600 transition"
                   >
                     Source Code

@@ -7,18 +7,21 @@
 
 html,body {
   overflow-x: hidden;
-  background: linear-gradient(135deg, #000000, #020024, #090979);
 }
 
 .glow-animate {
-  text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 20px yellow;
+  text-shadow: 
+    0 0 5px white, 
+    0 0 10px white, 
+    0 0 20px white;
 }
+
 
 .typewriter {
   display: inline-block;
   overflow: hidden;            /* Ensures text is hidden until revealed */
   white-space: nowrap;         /* Keeps text on one line */
-  border-right: 3px solid yellow; /* Cursor effect */
+  border-right: 3px solid; /* Cursor effect */
   width: 0;                    /* Start hidden */
   animation: typing 3s steps(20, end) forwards;
 }
