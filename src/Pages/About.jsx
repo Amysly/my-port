@@ -21,7 +21,7 @@ const About = () => {
           <img
             src="/images/amara.jpg"
             alt="Profile of Amarachi Obiegue"
-            className="shadow-lg w-40 h-40 sm:w-60 sm:h-60 lg:w-96 lg:h-96 object-contain
+            className="shadow-lg w-80 h-80 lg:w-96 lg:h-96 object-contain
             mt-4 sm:mt-4"
           />
         </div>

@@ -90,7 +90,7 @@ const Skills = () => {
               className="bg-zinc-900 p-3 rounded-lg flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
             > 
               <div>{skill.icon}</div>
-              <h4 className="font-sans text-white mt-2">{skill.name}</h4> 
+              <h4 className="font-sans text-white text-sm lg:text-xl mt-2">{skill.name}</h4> 
             </div>
           ))}
         </div>
