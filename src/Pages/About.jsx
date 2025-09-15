@@ -27,7 +27,7 @@ const About = () => {
         </div>
 
         {/* Text Content */}
-        <div className="text-white font-sans text-sm sm:text-xl 
+        <div className="text-white font-sans text-lg 
         lg:text-xl leading-relaxed sm:leading-7 lg:leading-8" data-aos="fade-left">
           <p className="mb-4">
             Every great website tells a story, and I love being the one who brings that story to
@@ -45,7 +45,7 @@ const About = () => {
       
       </div>
        <div className="flex justify-center mb-4">
-        <motion.h2 className="border border-white text-xl text-white 
+        <motion.h2 className="border border-white text-xl text-white whitespace-nowrap
         font-serif w-32 flex items-center justify-center p-2 hover:bg-black" data-aos='fade-left'
         >
           <Link to={'/project'}>

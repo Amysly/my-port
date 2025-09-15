@@ -99,7 +99,7 @@ const Skills = () => {
     <div>
       <div className="">
            <motion.p className="font-serif text-2xl 
-           lg:text-4xl text-center mb-4"
+           lg:text-4xl text-center mb-4 mt-4 sm:mt3"
            variants={containerVariants}
             initial="hidden"
             animate="visible">
@@ -114,8 +114,9 @@ const Skills = () => {
                  </motion.span>
             ))}
             </motion.p>
-            <h2 className="border border-black text-xl text-black 
-                   font-serif w-32  flex items-center justify-center p-2 mb-4 mx-auto" data-aos='fade-right'>
+            <h2 className="border border-black text-lg lg:text-xl text-black 
+                   font-serif w-32  flex items-center justify-center p-2 mb-4 mx-auto" 
+                   data-aos='fade-right'>
                      <Link to={'/contact'}>
                       Contact Me
                      </Link>

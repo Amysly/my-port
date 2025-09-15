@@ -67,8 +67,8 @@ const Project = () => {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-purple-950 text-black px-3 py-2 rounded-lg 
-                text-sm font-serif hover:bg-yellow-500 transition"
+                className="bg-white text-black px-3 py-2 rounded-lg 
+                text-sm font-serif hover:bg-zinc-600 transition"
               >
                 Live Demo
               </a>
@@ -76,7 +76,7 @@ const Project = () => {
                 href={project.codeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-purple-950 px-3 py-2 rounded-lg text-sm 
+                className="bg-white px-3 py-2 rounded-lg text-sm 
                 font-serif hover:bg-zinc-600 transition"
               >
                 Source Code
