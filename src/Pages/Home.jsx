@@ -30,13 +30,14 @@ useEffect(() => {
     "bg-zinc-700 p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300";
 
   return (
-    <div className=" bg-white min-h-screen flex items-center justify-center pt-4 px-12 ">
+    <div className="min-h-screen flex items-center justify-center 
+    md:min-h-0 md:block md:justify-normal py-4 px-12">
       <div className="text-white p-4 items-center">
         
         {/* Intro Section */}
-        <section className="text-center mt-2 text-black mb-3">
+        <section className="text-center mt-2 text-black mb-3 md:mt-14 lg:mt-24">
           <div className="font-sans">
-            <h1 className="text-2xl  lg:text-5xl mb-6 t font-serif"
+            <h1 className="text-2xl  lg:text-5xl mb-6 font-serif"
             >
               
               Hi, I'm

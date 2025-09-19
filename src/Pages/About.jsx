@@ -4,15 +4,16 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <section className="bg-purple-950 min-h-screen pt-12 px-4 flex flex-col items-center">
+    <section className="bg-purple-950 min-h-screen flex flex-col items-center pt-12 px-4
+     md:min-h-0 md:block md:justify-normal">
       {/* Heading */}
       <h2 className="text-white text-lg sm:text-xl lg:text-3xl font-serif 
-      text-center mt-5 sm:mt-16" data-aos="fade-in">
+      text-center mt-5 sm:mt-16 md:mt-1" data-aos="fade-in">
         ABOUT ME
       </h2>
 
       {/* Divider line */}
-      <div className="h-[2px] bg-white w-24 my-4" data-aos="fade-in"></div>
+      <div className="h-[2px] bg-white w-24 my-4 mx-auto" data-aos="fade-in"></div>
 
       {/* Content */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 lg:p-16">
@@ -44,9 +45,9 @@ const About = () => {
         </div>
       
       </div>
-       <div className="flex justify-center mb-4">
+       <div className="flex justify-center">
         <motion.h2 className="border border-white text-sm lg:text-xl text-white whitespace-nowrap
-        font-serif w-32 flex items-center justify-center p-2 hover:bg-black" data-aos='fade-left'
+        font-serif w-32 mb-4 md:mb-10 flex items-center justify-center p-2 hover:bg-black" data-aos='fade-left'
         >
           <Link to={'/project'}>
            My projects

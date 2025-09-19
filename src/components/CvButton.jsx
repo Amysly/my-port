@@ -19,7 +19,7 @@ const CvButton = () => {
         href="/cv/Amarachi-ObiegueCV.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-black px-4 py-2 flex items-center justify-center whitespace-nowrap
+        className="text-black px-4 py-2  flex items-center justify-center whitespace-nowrap
         font-serif w-32 border border-black"
          variants={cvButton}
           initial='hidden'

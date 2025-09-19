@@ -17,11 +17,11 @@ const Header = () => {
       : " relative text-white font-serif sm:text-lg lg:text-2xl px-4 py-3 block ";
 
   return (
-    <nav className="sm:bg-purple-950 p-2 sm:fixed top-0 left-0 w-full z-10">
+    <nav className="bg-purple-950 p-2 fixed top-0 left-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-          <div className="text-purple-950 font-serif text-lg 
-        sm:text-3xl lg:text-3xl lg:text-white">
+          <div className="font-serif text-lg 
+        sm:text-3xl lg:text-3xl text-white">
           Amy
         </div>
 
@@ -47,9 +47,7 @@ const Header = () => {
 
           {/* Mobile Toggle Button (fixed on small screens only) */}
     <div className="lg:hidden">
-      <div className="fixed top-4 right-4 bg-purple-950 flex gap-2 p-2 text-2xl z-20 
-     shadow-md">
-        <h2 className="text-white font-serif">menu</h2>
+      <div className="fixed top-4 right-4 z-20 text-2xl">
         <button className="text-white" onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -58,7 +56,7 @@ const Header = () => {
        
         {/* Mobile Sidebar */}
         <div
-          className={`lg:hidden fixed top-0 left-0 w-36 h-full bg-purple-950 shadow-xl transform z-10
+          className={`lg:hidden fixed top-0 left-0 w-48 h-full bg-purple-950 shadow-xl transform z-10
           transition-transform duration-300 ease-in-out text-xl ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
@@ -66,35 +64,35 @@ const Header = () => {
           <div className="py-6 flex flex-col">
             <NavLink
               to="/"
-              className={ ({ isActive }) =>`mb-4 ${LinkClass(isActive)}`}
+              className={ ({ isActive }) =>`mb-4 ml-4 md:mb-8 ${LinkClass(isActive)}`}
               onClick={() => setIsOpen(false)}
             >
               Home
             </NavLink>
             <NavLink
               to="/about"
-              className={({ isActive }) => `mb-4 mt-2 ${LinkClass(isActive)}`}
+              className={({ isActive }) => `mb-4 ml-4 mt-2 md:mb-8 ${LinkClass(isActive)}`}
               onClick={() => setIsOpen(false)}
             >
               About
             </NavLink>
             <NavLink
               to="/skills"
-              className={({ isActive }) => `mb-4 mt-3 ${LinkClass(isActive)}`}
+              className={({ isActive }) => `mb-4 mt-3 ml-4  md:mb-8 ${LinkClass(isActive)}`}
               onClick={() => setIsOpen(false)}
             >
               Skills
             </NavLink>
             <NavLink
               to="/project"
-              className={({ isActive }) => `mb-4 mt-3 ${LinkClass(isActive)}`}
+              className={({ isActive }) => `mb-4 mt-3 ml-4 md:mb-8 ${LinkClass(isActive)}`}
               onClick={() => setIsOpen(false)}
             >
               Projects
             </NavLink>
             <NavLink
               to="/contact"
-              className={({ isActive }) => `mt-3 ${LinkClass(isActive)}`}
+              className={({ isActive }) => `mt-3 ml-4 ${LinkClass(isActive)}`}
               onClick={() => setIsOpen(false)}
             >
               Contact

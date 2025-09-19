@@ -6,7 +6,7 @@ const myProjects = [
     description:
       `A responsive cryptocurrency tracker powered by the GeckoCoins API. The 
       app delivers real-time market updates, highlights coins performing well
-       (and those that aren’t), and includes a dynamic pie chart to visualize overall market trends.
+       (and those that aren’t), and includes a dynamic pie chart to visualize overall market trends
 `,
     techStack: "HTML, Tailwind CSS, React.js",
     liveLink: "https://cryptocurrencytracke.netlify.app/",
@@ -29,13 +29,14 @@ const myProjects = [
     id: 3,
     image: "images/movies.png",
     title: "Movie Search App",
-    description:
-      `A movie discovery app where users can search for films and view details
-       using a public movie database API.`,
+    description: `A movie discovery app where users can search for films and view 
+              details using a public movie database API. It features a clean interface, 
+              real-time search results, and detailed pages for each movie including 
+              ratings, release dates, and overviews.`,
     techStack: "HTML, Tailwind CSS, React.js",
     liveLink: "https://movieapp-amysly.netlify.app",
     codeLink: "https://github.com/Amysly/movie_app",
-  },
+  }
 ];
 
 export default myProjects;

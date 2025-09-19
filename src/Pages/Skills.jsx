@@ -51,14 +51,15 @@ const letterVariants = {
 const Skills = () => {
   return (
     <div>
-    <div className="min-h-screen flex items-center justify-center">
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-10 max-w-6xl">
+    <div className=" flex items-center justify-center
+     md:min-h-0 md:block md:justify-normal">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 md:p-5 lg:p-20">
         
         {/* LEFT SIDE - INTRO */}
-        <div className="flex flex-col justify-center">
+        <div className="">
           <motion.h2
             className="text-2xl lg:text-4xl font-serif
-             text-black text-center lg:text-left mb-6 mt-12 sm:mt-4"
+             text-black text-center lg:text-left mb-6 mt-12 sm:mt-4 md:mt-10"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -82,7 +83,7 @@ const Skills = () => {
         </div>
 
         {/* RIGHT SIDE - SKILLS GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-6 mt-4 lg:mt-10">
           {skills.map((skill) => (
             <div 
               key={skill.id} 

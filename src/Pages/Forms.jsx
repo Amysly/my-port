@@ -52,12 +52,13 @@ const letterVariants = {
 };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl">
+    <div className="min-h-screen flex items-center justify-center
+     md:min-h-0 md:block md:justify-normal px-6 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-10 w-full max-w-5xl">
         {/* Left Side - Writeup */}
-        <div className="flex flex-col justify-center">
+        <div className="">
            <motion.h2
-                className="text-2xl lg:text-5xl font-serif mt-2 sm:mt-16 mb-4"
+                className="text-2xl lg:text-5xl font-serif text-center mt-2 sm:mt-16 mb-4"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -73,7 +74,7 @@ const letterVariants = {
                   </motion.span>
                 ))}
               </motion.h2>
-          <p className="text-lg lg:text-xl mb-6 leading-relaxed">
+          <p className="text-lg lg:text-xl mb-6 md:mb-2 leading-relaxed">
             I’m open to remote and onsite opportunities whether full-time,
             part-time, or contract roles. If you’d like to discuss a project,
             collaboration, or job opportunity, please reach out!
@@ -82,7 +83,7 @@ const letterVariants = {
 
         {/* Right Side - Contact Form */}
         <div className="bg-zinc-950 p-6 md:p-10 rounded-lg shadow-lg mt-4
-         sm:mt-8 lg:mt-16" data-aos="zoom-in-up">
+         sm:mt-8 lg:mt-16 md-mt-2" data-aos="zoom-in-up">
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <input
               type="text"
