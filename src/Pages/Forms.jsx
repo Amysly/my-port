@@ -13,15 +13,45 @@ const Form = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+const onSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      alert("All fields are required!");
-      return;
-    }
-    console.log("Form Submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
+    if (sending) return;
+
+    setSending(true);
+    setShowShootingStar(true);
+
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    send(
+      "service_n5560yh",
+      "template_2dn6ubx",
+      { name, email, message },
+      "MHmR2cFLjCMDNZzlD0EeG"
+    )
+      .then(() => {
+        setModal({
+          show: true,
+          success: true,
+          message: "Message sent! Thank you — I’ll get back to you soon.",
+        });
+        e.target.reset();
+      })
+      .catch(() => {
+        setModal({
+          show: true,
+          success: false,
+          message: "Failed to send message. Please try again.",
+        });
+      })
+      .finally(() => {
+        setSending(false);
+        setTimeout(() => setShowShootingStar(false), 900);
+      });
   };
+
   const text = "Let’s Work Together!";
 const containerVariants = {
   hidden: { opacity: 0 },
