@@ -20,7 +20,7 @@ const Project = () => {
     </div>
 
         {/* Grid of cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 place-items-center w-full">
           {myProjects.map((project, index) => (
             <div 
              key={project.id}

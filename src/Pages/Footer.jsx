@@ -3,7 +3,7 @@ import { SiGithub } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="bg-purple-950">
+    <footer className="bg-purple-950 w-full mt-10">
       {/* Social Icons */}
       <div className="flex items-center justify-center space-x-4 mb-2 pt-3 text-white">
         <a

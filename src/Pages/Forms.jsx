@@ -27,13 +27,13 @@ const Form = () => {
     emailjs
       .send(
         "service_p1n92qn", // EmailJS Service ID
-        "template_2dn6ubx", // your Template ID
+        "", // your Template ID
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        "MHmR2cFLjCMDNZzlD0EeG" // Public Key
+        "fB1Ojhat7RcH-5d0L" // Public Key
       )
       .then(() => {
         setShowModal({

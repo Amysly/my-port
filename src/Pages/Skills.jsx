@@ -51,9 +51,8 @@ const letterVariants = {
 const Skills = () => {
   return (
     <div>
-    <div className=" flex items-center justify-center
-     md:min-h-0 md:block md:justify-normal">
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 md:p-5 lg:p-20">
+    <div className="w-full overflow-x-hidden px-4 sm:px-6 lg:px-12 py-8 flex flex-col items-center justify-center md:block md:justify-normal">
+      <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
         {/* LEFT SIDE - INTRO */}
         <div className="">
@@ -83,7 +82,7 @@ const Skills = () => {
         </div>
 
         {/* RIGHT SIDE - SKILLS GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-6 mt-4 lg:mt-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 justify-items-center w-full">
           {skills.map((skill) => (
             <div 
               key={skill.id} 
