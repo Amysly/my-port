@@ -11,16 +11,17 @@ const Project = () => {
       <div>
         {/* Heading + description */}
         <div className="flex flex-col items-center justify-center text-center font-serif mb-8 mt-10">
-          <h2 className="text-2xl sm:text-3xl mb-4">Things I’ve Built</h2>
-          <p className="leading-6 text-base sm:text-lg max-w-2xl">
-            Here are some of the projects I’ve worked on. Each one highlights my
-            ability to design and build effective solutions, adapt to different
-            technologies, and see projects through from start to finish.
-          </p>
+          <h2 className="text-2xl sm:text-4xl mb-4">Things I’ve Built</h2>
+          <p className="leading-6 text-lg sm:text-lg max-w-2xl">
+        Here are some of the projects I’ve worked on. Each one highlights my
+        ability to design and build effective solutions, adapt to different
+        technologies, and see projects through from start to finish.
+      </p>
+
     </div>
 
         {/* Grid of cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 place-items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6  w-full">
           {myProjects.map((project, index) => (
             <div 
              key={project.id}

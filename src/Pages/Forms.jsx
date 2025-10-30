@@ -83,7 +83,7 @@ const Form = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center md:min-h-0 md:block md:justify-normal px-6 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 w-full p-4 lg:p-10">
+      <section className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 w-full p-4 lg:p-10">
         
         {/* Left Side */}
         <div className="mt-3 lg:mt-8">
@@ -168,7 +168,7 @@ const Form = () => {
             </div>
           )}
         </div>
-      </div>
+      </section>
     </div>
   );
 };

@@ -17,15 +17,17 @@ const skills = [
   { id: 7, name: "Git", icon: <SiGit className="text-red-500 text-3xl" /> },
   { id: 8, name: "JavaScript", icon: <SiJavascript className="text-yellow-400 text-3xl" /> },
 ];
+
 const text = "Technologies I Specialize In";
-const contactText ='Interested in working with me?'
+const contactText = "Interested in working with me?";
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.07, // controls delay between letters
-      delayChildren: 0.2,   // wait before starting
+      staggerChildren: 0.07,
+      delayChildren: 0.2,
     },
   },
 };
@@ -49,15 +51,12 @@ const letterVariants = {
 
 const Skills = () => {
   return (
-    <div>
-    <div className="w-full overflow-x-hidden px-4 sm:px-6 lg:px-12 py-8 flex flex-col items-center justify-center md:block md:justify-normal">
-      <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        
-        {/* LEFT SIDE - INTRO */}
-        <div className="">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-white py-8 mt-10">
+      <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-6">
+        {/* LEFT SIDE */}
+        <div>
           <motion.h2
-            className="text-2xl lg:text-4xl font-serif
-             text-black text-center lg:text-left mb-6 mt-12 sm:mt-4 md:mt-10"
+            className="text-3xl lg:text-5xl  font-serif text-black text-center lg:text-left mb-6"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -73,58 +72,54 @@ const Skills = () => {
               </motion.span>
             ))}
           </motion.h2>
-          <p className="text-lg lg:text-xl font-sans text-center lg:text-left">
-            Over the past few years, I’ve gained hands-on experience with modern
+          <p className="text-lg lg:text-xl text-center lg:text-left">
+            Over the past few years, I’ve gained hands on experience with modern
             frontend tools and frameworks. I use these technologies to build
             responsive, user-friendly, and visually engaging applications.
           </p>
         </div>
 
-        {/* RIGHT SIDE - SKILLS GRID */}
-  <div className="w-full">
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-    {skills.map((skill) => (
-      <div
-        key={skill.id}
-        aria-label={skill.name}
-        className="bg-zinc-900 w-28 h-28 sm:w-32 sm:h-32 rounded-xl flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
-      >
-        <div className="text-4xl mb-2">{skill.icon}</div>
-        <h4 className="font-sans text-white text-sm text-center">{skill.name}</h4>
-      </div>
-    ))}
-  </div>
-</div>
-      </section>
-    </div>
-    <div>
-      <div className="">
-           <motion.p className="font-serif text-2xl 
-           lg:text-4xl text-center mb-4 mt-4 sm:mt3"
-           variants={containerVariants}
-            initial="hidden"
-            animate="visible">
-              {contactText.split("").map((char, index) => (
-              <motion.span
-                key={index}
-                variants={letterVariants}
-                whileHover="hover"
-                className="inline-block"
+        {/* RIGHT SIDE */}
+        <div className="w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 lg:gap-8 justify-items-center">
+            {skills.map((skill) => (
+              <div
+                key={skill.id}
+                aria-label={skill.name}
+                className="bg-zinc-900 w-28 h-28 sm:w-32 sm:h-32 rounded-xl flex flex-col 
+                items-center justify-center hover:scale-105 transition-transform duration-300"
               >
-                {char === " " ? "\u00A0" : char}
-                 </motion.span>
+                <div className="text-4xl mb-2">{skill.icon}</div>
+                <h4 className="text-white text-sm text-center">{skill.name}</h4>
+              </div>
             ))}
-            </motion.p>
-            <h2 className="border border-black text-sm lg:text-xl text-black 
-                   font-serif w-32  flex items-center justify-center p-2 mb-6 mx-auto" 
-                   data-aos='fade-right'>
-                     <Link to={'/contact'}>
-                      Contact Me
-                     </Link>
-             </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <div className="mt-16 text-center">
+        <motion.p
+          className="font-serif text-2xl lg:text-3xl mb-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {contactText.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              variants={letterVariants}
+              whileHover="hover"
+              className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.p>
+       <h2 className="border border-black text-sm lg:text-xl text-black font-serif w-32 
+       flex items-center justify-center p-2 mb-6 mx-auto" data-aos='fade-right'>
+         <Link to={'/contact'}> Contact Me </Link> </h2>
       </div>
-    </div>
-    
     </div>
   );
 };
