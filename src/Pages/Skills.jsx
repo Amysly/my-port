@@ -16,7 +16,6 @@ const skills = [
   { id: 6, name: "HTML", icon: <SiHtml5 className="text-orange-500 text-3xl" /> },
   { id: 7, name: "Git", icon: <SiGit className="text-red-500 text-3xl" /> },
   { id: 8, name: "JavaScript", icon: <SiJavascript className="text-yellow-400 text-3xl" /> },
-  { id: 9, name: "Bootstrap", icon: <SiBootstrap className="text-purple-500 text-3xl" /> },
 ];
 const text = "Technologies I Specialize In";
 const contactText ='Interested in working with me?'

@@ -30,7 +30,7 @@ const About = () => {
         {/* Text Content */}
         <div className="text-white font-sans text-lg sm:text-sm
         lg:text-xl leading-relaxed sm:leading-7 lg:leading-8" data-aos="fade-left">
-          <p className="mb-4">
+          <p className="mb-4 hidden sm:block">
             Every great website tells a story, and I love being the one who brings that story to
             life. My journey started with simple lines of HTML and CSS, but curiosity kept pushing
             me further into the world of Tailwind CSS, JavaScript, TypeScript and eventually React.
