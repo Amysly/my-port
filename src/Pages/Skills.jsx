@@ -82,18 +82,20 @@ const Skills = () => {
         </div>
 
         {/* RIGHT SIDE - SKILLS GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 justify-items-center w-full">
-          {skills.map((skill) => (
-            <div 
-              key={skill.id} 
-              aria-label={skill.name}
-              className="bg-zinc-900 p-3 rounded-lg flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
-            > 
-              <div>{skill.icon}</div>
-              <h4 className="font-sans text-white text-sm lg:text-xl mt-2">{skill.name}</h4> 
-            </div>
-          ))}
-        </div>
+  <div className="w-full">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+    {skills.map((skill) => (
+      <div
+        key={skill.id}
+        aria-label={skill.name}
+        className="bg-zinc-900 w-28 h-28 sm:w-32 sm:h-32 rounded-xl flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300"
+      >
+        <div className="text-4xl mb-2">{skill.icon}</div>
+        <h4 className="font-sans text-white text-sm text-center">{skill.name}</h4>
+      </div>
+    ))}
+  </div>
+</div>
       </section>
     </div>
     <div>

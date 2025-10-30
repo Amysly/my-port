@@ -27,7 +27,7 @@ const Form = () => {
     emailjs
       .send(
         "service_p1n92qn", // EmailJS Service ID
-        "", // your Template ID
+        "template_2dn6ubx", // your Template ID
         {
           name: formData.name,
           email: formData.email,

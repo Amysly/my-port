@@ -28,7 +28,7 @@ const About = () => {
         </div>
 
         {/* Text Content */}
-        <div className="text-white font-sans text-lg 
+        <div className="text-white font-sans text-lg sm:text-sm
         lg:text-xl leading-relaxed sm:leading-7 lg:leading-8" data-aos="fade-left">
           <p className="mb-4">
             Every great website tells a story, and I love being the one who brings that story to
