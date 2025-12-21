@@ -1,15 +1,28 @@
 
 import Home from "../Pages/Home"
 import About from "../Pages/About";
-import Skills from "../Pages/Skills";
-
+import Project from "../Pages/Project";
+import Contact from "../Pages/Contact";
 
 const Homepage = () => {
     return (  
         <>
-        <Home/>
-        <About/>
-        <Skills/>
+        <section id="home" className="scroll-mt-24">
+        <Home />
+      </section>
+
+      <section id="about" className="scroll-mt-24">
+        <About />
+      </section>
+
+      <section id="project" className="scroll-mt-24">
+        <Project />
+      </section>
+
+      <section id="contact" className="scroll-mt-24">
+        <Contact />
+      </section>
+
         </>
     );
 }

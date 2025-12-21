@@ -1,33 +1,32 @@
 import React from "react";
 import myProjects from "../Pages/ProjectDetails";
-import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+
 
 const Project = () => {
   return (
+    <>
     <div
       className="py-8 px-4 sm:px-6 md:px-8 lg:py-12 lg:px-16 
-      min-h-screen md:min-h-0 md:block mt-10"
+       md:min-h-0 md:block"
     >
       <div>
         {/* Heading + description */}
-        <div className="flex flex-col items-center justify-center text-center font-serif mb-8 mt-10">
+        <div className="flex flex-col items-center justify-center text-center 
+        font-bold mb-6">
           <h2 className="text-2xl sm:text-4xl mb-4">Things I’ve Built</h2>
-          <p className="leading-6 text-lg sm:text-lg max-w-2xl">
-        Here are some of the projects I’ve worked on. Each one highlights my
-        ability to design and build effective solutions, adapt to different
-        technologies, and see projects through from start to finish.
-      </p>
-
     </div>
 
         {/* Grid of cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6  w-full">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 p-10">
           {myProjects.map((project, index) => (
             <div 
              key={project.id}
               data-aos="fade-up" 
               data-aos-delay={`${index * 500}`} 
-              className="bg-zinc-950 overflow-hidden shadow-2xl rounded-b-md"
+              className="
+          bg-cream overflow-hidden shadow-lg rounded-md pt-8"
+
             >
               {/* Image preview */}
               <a
@@ -44,14 +43,14 @@ const Project = () => {
               </a>
 
               {/* Card Content */}
-              <div className="p-4 font-serif">
-                <h3 className="text-lg font-semibold text-white text-center">
+              <div className="p-4 font-writing">
+                <h3 className="text-lg font-semibold text-black text-center">
                   {project.title}
                 </h3>
-                <p className="text-sm text-white mt-2">
+                <p className="text-sm mt-2">
                   {project.description}
                 </p>
-                <p className="text-sm text-white mt-1">{project.techStack}</p>
+                <p className="text-sm font-bold mt-3">{project.techStack}</p>
 
                 <div className="flex gap-3 mt-4 flex-wrap justify-center">
                   {project.liveLink ? (
@@ -59,10 +58,10 @@ const Project = () => {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-black px-3 py-2 rounded-lg 
-                      text-sm font-serif hover:bg-slate-100 transition"
+                      className="bg-writing text-white px-5 py-2 rounded-lg 
+                      text-sm font-writing hover:bg-neutral-400 transition"
                     >
-                      Live Demo
+                      Live
                     </a>
                   ) : (
                     <span
@@ -79,10 +78,10 @@ const Project = () => {
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-black px-3 py-2 rounded-lg 
-                      text-sm font-serif hover:bg-slate-100 transition"
+                      className="bg-writing text-white px-3 py-2 rounded-lg 
+                      text-sm font-serif hover:bg-neutral-400 transition"
                     >
-                      Source Code
+                       <FaGithub size={25} className="" />
                     </a>
                   ) : (
                     <span
@@ -100,6 +99,7 @@ const Project = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

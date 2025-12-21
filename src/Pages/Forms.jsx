@@ -1,39 +1,52 @@
-import React, { useState } from "react";
-import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
+
+  const text = "Let’s Work Together!";
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.07,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 500, damping: 12 },
+    },
+    hover: {
+      scale: 1.3,
+      transition: { type: "spring", stiffness: 400 },
+    },
+  };
+
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+  const form = useRef();
+  const [showModal, setShowModal] = useState({
+    show: false,
+    success: false,
     message: "",
   });
   const [sending, setSending] = useState(false);
-  const [showModal, setShowModal] = useState({ show: false, success: false, message: "" });
 
-  // Handle Input Change
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Handle Submit
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    if (sending) return;
-
     setSending(true);
 
     emailjs
-      .send(
-        "service_p1n92qn", // EmailJS Service ID
-        "template_2dn6ubx", // your Template ID
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-        "fB1Ojhat7RcH-5d0L" // Public Key
+      .sendForm(
+        "service_p1n92qn",
+        "template_pcz9uoj",
+        form.current,
+        "TyPKlLCJXWxxWTgYs"
       )
       .then(() => {
         setShowModal({
@@ -41,7 +54,7 @@ const Form = () => {
           success: true,
           message: "Message sent! Thank you — I’ll get back to you soon.",
         });
-        setFormData({ name: "", email: "", message: "" });
+        form.current.reset(); // reset uncontrolled form
       })
       .catch(() => {
         setShowModal({
@@ -56,39 +69,13 @@ const Form = () => {
       });
   };
 
-  // Text Animation
-  const text = "Let’s Work Together!";
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.07,
-        delayChildren: 0.2,
-      },
-    },
-  };
-  const letterVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 500, damping: 12 },
-    },
-    hover: {
-      scale: 1.3,
-      transition: { type: "spring", stiffness: 400 },
-    },
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center md:min-h-0 md:block md:justify-normal px-6 py-12">
-      <section className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 w-full p-4 lg:p-10">
-        
-        {/* Left Side */}
-        <div className="mt-3 lg:mt-8">
+    <div className="md:min-h-0 px-6 py-12">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full p-4 lg:p-10">
+      {/* Left Side */}
+        <div className="mt-3 lg:mt-8 relative z-0">
           <motion.h2
-            className="text-2xl lg:text-5xl font-serif text-center mt-2 lg:mb-5 sm:mt-16 mb-4"
+            className="text-2xl lg:text-4xl font-bold mt-2 lg:mb-5 sm:mt-16 mb-4"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -104,60 +91,65 @@ const Form = () => {
               </motion.span>
             ))}
           </motion.h2>
-          <p className="text-lg lg:text-xl mb-6 md:mb-2 leading-relaxed">
+
+          <p className="text-lg lg:text-xl mb-6 md:mb-2 leading-relaxed font-sans">
             I’m open to remote and onsite opportunities whether full-time,
             part-time, or contract roles. If you’d like to discuss a project,
             collaboration, or job opportunity, please reach out!
           </p>
         </div>
 
+
         {/* Right Side - Contact Form */}
-        <div
-          className="bg-zinc-950 p-6 md:p-10 rounded-lg shadow-lg mt-4 sm:mt-8 lg:mt-16"
-          data-aos="zoom-in-up"
-        >
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+        <div className="p-3 md:p-10 mt-4 sm:mt-8 lg:mt-16">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col gap-3 max-w-md mx-auto"
+          >
+            <label className="text-sm">Name</label>
             <input
-              type="text"
-              name="name"
+              name="user_name"
               placeholder="Mary Joe"
-              className="p-3 w-full border border-zinc-700 rounded-md bg-transparent text-white"
-              value={formData.name}
-              onChange={handleChange}
+             className="p-3 border border-gray-200 rounded-md text-sm
+              focus:border-amber-800 focus:outline-none"
+
               required
             />
+
+            <label className="text-sm">Email</label>
             <input
-              type="email"
-              name="email"
+              name="user_email"
               placeholder="email@example.com"
-              className="p-3 w-full border border-zinc-700 rounded-md bg-transparent text-white"
-              value={formData.email}
-              onChange={handleChange}
+               className="p-3 border border-gray-200 rounded-md text-sm
+              focus:border-amber-800 focus:outline-none"
+
               required
             />
+
+            <label className="text-sm">Message</label>
             <textarea
               name="message"
               placeholder="How can I help?"
-              rows="5"
-              className="p-3 w-full border border-zinc-700 rounded-md bg-transparent text-white resize-none"
-              value={formData.message}
-              onChange={handleChange}
+              rows="4"
+              className="p-2 border border-gray-200 rounded-md text-sm
+              focus:border-amber-800 focus:outline-none"
+
               required
-            ></textarea>
+            />
+
             <button
               type="submit"
               disabled={sending}
-              className={`p-3 rounded-md font-sans transition ${
-                sending
-                  ? "bg-gray-500 cursor-not-allowed"
-                  : "bg-white text-black hover:bg-gray-200"
+              className={`p-2 rounded-md font-writing  text-sm text-white transition w-40 mx-auto ${
+                sending ? "bg-gray-500 cursor-not-allowed" : "bg-writing hover:bg-neutral-400"
               }`}
             >
               {sending ? "Sending..." : "Send Message"}
             </button>
           </form>
 
-          {/* Modal (Success/Fail Message) */}
+          {/* Modal */}
           {showModal.show && (
             <div
               className={`mt-4 text-center p-3 rounded-md ${

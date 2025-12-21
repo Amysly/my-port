@@ -11,7 +11,9 @@ html,body{
   padding: 0;
   margin: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 
 
 
@@ -22,7 +24,9 @@ html,body{
     0 0 20px white;
 }
 
-
+/*.footer-border{
+  border:1px solid gray
+}*/
 .typewriter {
   display: inline-block;
   overflow: hidden;            /* Ensures text is hidden until revealed */
@@ -47,6 +51,19 @@ html,body{
   50% {
     border-color: transparent;
   }
+}
+
+@keyframes skill-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-skill-slide {
+  animation: skill-slide 18s linear infinite;
 }
 
 

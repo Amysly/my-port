@@ -14,20 +14,23 @@ const cvButton={
 
 const CvButton = () => {
   return (
-   <div className="flex justify-center">
-    <motion.a
-        href="/cv/Amarachi-ObiegueCV.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-black px-4 py-2  flex items-center justify-center whitespace-nowrap
-        font-serif w-32 border border-black"
-         variants={cvButton}
-          initial='hidden'
-          animate='visible'
-    >
-        View Resume
-    </motion.a>
+  <div className="flex justify-center">
+  <motion.a
+    href="/cv/Amarachi-ObiegueCV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-white px-4 py-2 text-xl bg-writing flex items-center justify-center 
+    whitespace-nowrap hover:bg-white hover:text-writing hover:border border-amber-900
+    font-sans w-32 mt-5 rounded-lg transition-colors duration-300 
+    hover:scale-105"
+    variants={cvButton}
+    initial="hidden"
+    animate="visible"
+  >
+    Hire Me
+  </motion.a>
 </div>
+
   )
 }
 

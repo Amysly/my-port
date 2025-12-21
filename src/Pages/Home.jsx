@@ -30,31 +30,35 @@ useEffect(() => {
     "bg-zinc-700 p-2 rounded-full hover:bg-yellow-400 transition-colors duration-300";
 
   return (
-    <div className="min-h-screen flex items-center justify-center 
+    <div className=" bg-cream min-h-screen flex items-center justify-center 
     md:min-h-0 md:block md:justify-normal py-4 px-12">
-      <div className="text-white p-4 items-center">
-        
+      <div className="p-4 items-center">
+         <div className="flex justify-center items-center mt-16">
+            <img 
+            src="images/amyslyblack.png"
+            className="h-80 w-80 rounded-full object-cover"
+            />
+
+          </div>
         {/* Intro Section */}
-        <section className="text-center mt-2 text-black mb-3 md:mt-14 lg:mt-24">
+        <section className="text-center mt-2 text-black mb-3">
           <div className="font-sans">
-            <h1 className="text-2xl  lg:text-5xl mb-6 font-serif"
+            <h1 className="text-2xl  lg:text-5xl mb-6 font-sans"
             >
               
               Hi, I'm
             </h1>
              <h1
-            className='text-2xl  lg:text-5xl mb-6  font-serif typewriter'
+            className='text-2xl  lg:text-5xl mb-6  font-sans typewriter'
         >
           Amarachi Obiegue
         </h1>
-          <motion.p className="text-lg lg:text-xl  font-serif"
+          <motion.p className="text-lg lg:text-xl  font-sans text-black"
           variants={paragraphWrite}
           initial='hidden'
           animate='visible'
           >
             I'm a frontend developer specializing in building user-friendly web applications. 
-            I'm seeking a challenging role where I can apply my skills, grow my potential, 
-            and contribute to both team collaboration and company success.
           </motion.p>
           </div>
          
