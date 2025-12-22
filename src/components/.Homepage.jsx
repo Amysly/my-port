@@ -22,7 +22,6 @@ const Homepage = () => {
       <section id="contact" className="scroll-mt-24">
         <Contact />
       </section>
-
         </>
     );
 }

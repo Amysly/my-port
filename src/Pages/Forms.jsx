@@ -101,7 +101,7 @@ const Form = () => {
 
 
         {/* Right Side - Contact Form */}
-        <div className="p-3 md:p-10 mt-4 sm:mt-8 lg:mt-16">
+        <div className="p-3 md:p-10 mt-4 sm:mt-8 lg:mt-16" data-aos='zoom-in'>
           <form
             ref={form}
             onSubmit={sendEmail}

@@ -17,13 +17,13 @@ const paragraphWrite={
 
 
 const Home = () => {
-  const [doneTyping, setDoneTyping] = useState(false);
+  //const [doneTyping, setDoneTyping] = useState(false);
 
-useEffect(() => {
+//useEffect(() => {
     // match typing duration in CSS (2s here)
-    const timer = setTimeout(() => setDoneTyping(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+   // const timer = setTimeout(() => setDoneTyping(true), 3000);
+    //return () => clearTimeout(timer);
+  //}, []);
 
 
   const iconStyle =
@@ -35,7 +35,9 @@ useEffect(() => {
       <div className="p-4 items-center">
          <div className="flex justify-center items-center mt-16">
             <img 
+            alt="Amarasly's profile image"
             src="images/amyslyblack.png"
+            loading="lazy"
             className="h-80 w-80 rounded-full object-cover"
             />
 

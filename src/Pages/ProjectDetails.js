@@ -36,13 +36,13 @@ const myProjects = [
   },
   {
     id: 4,
-    image: "images/movies.png",
+    image: "images/schmgt.png",
     title: "School Management System",
-    description: `A movie discovery app where users can search for films and view 
-              details using a public movie database API.`,
+    description: `An ongoing full-stack school management system for managing 
+    students, staff, courses, and academic operations.`,
     techStack: "HTML, Tailwind CSS, React.js + TypeScript + Express.js + MongoDB",
-    liveLink: "https://movieapp-amysly.netlify.app",
-    codeLink: "https://github.com/Amysly/movie_app",
+    liveLink: "",
+    codeLink: "https://github.com/Amysly/AmaniProject",
   }
 ];
 

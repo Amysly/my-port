@@ -65,8 +65,8 @@ const Header = () => {
           <div className="py-6 flex flex-col items-center gap-4">
             {[
               { to: "home", label: "Home" },
-              { to: "about", label: "About" },
-              { to: "project", label: "Projects" },
+              { to: "about-me", label: "About" },
+              { to: "projects", label: "Projects" },
               { to: "contact", label: "Contact" },
             ].map((link) => (
               <Link
