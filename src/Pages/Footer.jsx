@@ -6,7 +6,8 @@ const Footer = () => {
     <footer className="bg-cream w-full mt-12">
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Top Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 
+        gap-8 items-center">
           {/* Brand */}
           <div className="p-4 lg:p-5 sm:p-0">
             <h2 className="font-bold text-2xl mb-2  sm:text-left">
