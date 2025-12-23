@@ -19,6 +19,8 @@ import Skills from "./Pages/Skills";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
+    {/* ROUTE WITHOUT HEADER & FOOTER */}
+     <Route path="*" element={<NotFound />} />
       {/* ROUTES WITH HEADER & FOOTER */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<Homepage />} />
@@ -27,9 +29,6 @@ const router = createBrowserRouter(
         <Route path="/projects" element={<Project />} />
         <Route path="/contact" element={<Forms />} />
       </Route>
-
-      {/* ROUTE WITHOUT HEADER & FOOTER */}
-      <Route path="*" element={<NotFound />} />
     </>
   )
 );
