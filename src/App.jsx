@@ -8,7 +8,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Homepage from "./components/Homepage";
+import Homepage from "./components/.Homepage";
 import MainLayout from "./layouts/MainLayout";
 import About from "./Pages/About";
 import Forms from "./Pages/Forms";

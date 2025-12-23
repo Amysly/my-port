@@ -18,8 +18,8 @@ const Header = () => {
     <nav className="fixed top-0 left-0 w-full z-30 p-4 shadow-lg bg-cream">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="font-sans text-lg sm:text-3xl lg:text-3xl text-writing cursor-pointer">
-          Amy
+        <div className="font-sans text-lg sm:text-3xl lg:text-2xl text-writing cursor-pointer">
+          Amysly
         </div>
 
         {/* Desktop Nav */}
