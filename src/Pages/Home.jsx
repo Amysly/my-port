@@ -38,7 +38,7 @@ const Home = () => {
             alt="Amarasly's profile image"
             src="images/amyslyblack.png"
             loading="lazy"
-            className="h-80 w-80 rounded-full object-cover"
+            className="h-64 w-64 rounded-full object-cover"
             />
 
           </div>

@@ -2,7 +2,7 @@
 import Home from "../Pages/Home"
 import About from "../Pages/About";
 import Project from "../Pages/Project";
-import Contact from "../Pages/Contact";
+import Forms from "../Pages/Forms"
 
 const Homepage = () => {
     return (  
@@ -20,7 +20,7 @@ const Homepage = () => {
       </section>
 
       <section id="contact" className="scroll-mt-24">
-        <Contact />
+        <Forms />
       </section>
         </>
     );
